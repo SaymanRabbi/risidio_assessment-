@@ -4,6 +4,8 @@ import Background1 from '../../image/collection1.png';
 import Background2 from '../../image/collection2.png';
 import Background3 from '../../image/collection3.png';
 import user from '../../image/avatar.png';
+import Button from '../Button/Button';
+import { FaLongArrowAltRight } from "react-icons/fa";
 
 interface CollectionProps {
     title: string;
@@ -22,13 +24,13 @@ const CollectionData:CollectionProps[] = [
         background: Background1,
      },{
         title:'Future',
-        button: true,
+        button: false,
         userImg: user,
         userName: 'Julien',
         background: Background2,
      },{
         title:'Mother nature',
-        button: true,
+        button: false,
         userImg: user,
         userName: 'Maria',
         background: Background3,
@@ -50,12 +52,22 @@ const Collection = () => {
                  <div
                   className=' h-[529px] rounded-[47px] bg-[#FAFAFA] p-[16px] shadow-lg'
                  >
-                    <div className='h-[227px]'>
+                    <div className='h-[227px] relative'>
                            <img src={
                                  collection?.background
                            } alt="" 
                             className=' w-[100%] h-[100%] rounded-[47px]'
                            />
+                           {
+                             collection?.button &&  <div className=' absolute w-[100%] h-[100%] flex justify-center items-center top-[5%]'>
+                                <Button
+                                 className=' bg-white border-white font-[600] text-[16px] leading-[19px] text-[#23252B] flex items-center gap-x-1'
+                                >
+                                Go to collection 
+                                <FaLongArrowAltRight  />
+                                </Button>
+                             </div>
+                           }
                     </div>
                        {/* tittle and button */}
             <div className=' pt-[39px] flex items-center justify-between'>
