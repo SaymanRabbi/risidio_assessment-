@@ -4,7 +4,7 @@ import Button from '../Button/Button';
 
 const Navbar = () => {
     return (
-        <Container className=' py-[33px]'>
+        <Container className='py-[33px]'>
             {/* -----content----- */}
             <div className=' flex justify-between items-center'>
                   {/* -----logo */}
@@ -16,7 +16,7 @@ const Navbar = () => {
                   {/* -----logo */}
                   {/* -----call to action */}
                   <div>
-                    <Button className=' bg-white text-textColor'>
+                    <Button className=' bg-white text-textColor font-[600]'>
                     Connect Wallet
                     </Button>
                   </div>
