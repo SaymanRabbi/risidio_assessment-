@@ -1,12 +1,11 @@
+import Navbar from "./Components/Navbar/Navbar";
 
 
 function App() {
   return (
-   <div
-   className="text-primary bg-secondary p-4 border"
-   >
-    hello world
-   </div>
+  <>
+   <Navbar/>
+  </>
   );
 }
 
