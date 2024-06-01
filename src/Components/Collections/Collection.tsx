@@ -52,14 +52,14 @@ const Collection = () => {
                  <div
                   className=' h-[529px] rounded-[47px] bg-[#FAFAFA] p-[16px] shadow-lg'
                  >
-                    <div className='h-[227px] relative'>
+                    <div className='h-[227px] relative overflow-hidden'>
                            <img src={
                                  collection?.background
                            } alt="" 
-                            className=' w-[100%] h-[100%] rounded-[47px]'
+                            className=' w-[100%] h-[100%] rounded-[47px] '
                            />
                            {
-                             collection?.button &&  <div className=' absolute w-[100%] h-[100%] flex justify-center items-center top-[5%]'>
+                             collection?.button &&  <div className=' absolute w-[100%] h-[100%] flex justify-center items-center top-[0%] bg-black/30 rounded-[47px]'>
                                 <Button
                                  className=' bg-white border-white font-[600] text-[16px] leading-[19px] text-[#23252B] flex items-center gap-x-1'
                                 >

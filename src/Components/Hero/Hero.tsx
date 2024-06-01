@@ -27,7 +27,10 @@ const Hero:React.FC<HeroProps> = ({
      <Container
         className='!px-[80px] pt-[54px]'
      >
-         <Stricker />
+        {
+            button && <Stricker />
+        }
+         
            <div
          className={`bg-[#E6E9F2] rounded-[30px] pl-[87px] pr-[74px]  ${className} min-h-[518px] h-[100%] max-w-[99%] w-[100%] mx-auto`}
         >
@@ -62,7 +65,7 @@ const Hero:React.FC<HeroProps> = ({
                     {/* -----description--- */}
                      {
                             description && (
-                                <div className=' mt-[12px]'>
+                                <div className=' mt-[12px] md:max-w-[55%]'>
                                     <p className=' text-[16px] text-[#23252B] font-[400] leading-[36px]'>
                                     {descriptionText}
                                     </p>
