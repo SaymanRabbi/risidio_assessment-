@@ -1,3 +1,4 @@
+import Collection from "./Components/Collections/Collection";
 import HomeHero from "./Components/HomeHero/HomeHero";
 import Navbar from "./Components/Navbar/Navbar";
 
@@ -7,6 +8,7 @@ function App() {
   <>
    <Navbar/>
    <HomeHero/>
+   <Collection/>
   </>
   );
 }
