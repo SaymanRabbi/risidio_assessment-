@@ -46,7 +46,7 @@ const Collection = () => {
                 Collections
             </h2>
           <div
-           className=' grid grid-cols-1 md:grid-cols-3 gap-x-[40px]'
+           className=' grid grid-cols-1 md:grid-cols-3 gap-[40px]'
           >
           {
                 CollectionData.map((collection, index) => (

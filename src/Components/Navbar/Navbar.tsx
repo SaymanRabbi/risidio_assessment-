@@ -18,7 +18,7 @@ const Navbar = () => {
             {/* -----content----- */}
             <div className=' flex justify-between items-center z-[100]'>
                   {/* -----logo */}
-                  <div className=' text-[39px] font-bold text-textColor'>
+                  <div className=' md:text-[39px] text-[30px] font-bold text-textColor'>
                  <Link to='/'>
                  <h2>
                   MARKETPLACE.

@@ -26,17 +26,17 @@ const Hero:React.FC<HeroProps> = ({
 }) => {
     return (
      <Container
-        className='!px-[80px] pt-[54px]'
+        className='px-[80px] md:pt-[54px]'
      >
         {
             button && <Stricker />
         }
          
            <div
-         className={`bg-[#E6E9F2] rounded-[30px] pl-[87px] pr-[74px]  ${className} min-h-[518px] h-[100%] max-w-[99%] w-[100%] mx-auto`}
+         className={`bg-[#E6E9F2] rounded-[30px] md:pl-[87px] pl-[20px] pr:[20px] md:pr-[74px]  ${className} min-h-[518px] h-[100%] max-w-[99%] w-[100%] mx-auto`}
         >
             <div
-             className='flex items-center justify-between w-[98%] mx-auto'
+             className='grid md:grid-cols-2 grid-cols-1 w-[98%] mx-auto'
             >
                 {/* ----left content---- */}
             <div className=' pt-[71px] pb-[64px]'>
@@ -66,7 +66,7 @@ const Hero:React.FC<HeroProps> = ({
                     {/* -----description--- */}
                      {
                             description && (
-                                <div className=' mt-[12px] md:max-w-[55%]'>
+                                <div className=' mt-[12px] md:max-w-[55%] w-[100%]'>
                                     <p className=' text-[16px] text-[#23252B] font-[400] leading-[36px]'>
                                     {descriptionText}
                                     </p>
@@ -90,13 +90,13 @@ const Hero:React.FC<HeroProps> = ({
                     {
                         button && (
                             <div className=' mt-[48px] flex gap-x-[15px]'>
-                               <Button className=' bg-[#23252B] text-white !px-[100px]'>
+                               <Button className=' bg-[#23252B] text-white lg:!px-[100px] !px-[20px]'>
                                  Buy 
                                  </Button>
                                 <Link
                                  to={'/collection'}
                                 >
-                                <Button className=' bg-[#E6E9F2] text-[#23252B] !px-[70px]'>
+                                <Button className=' bg-[#E6E9F2] text-[#23252B] lg:!px-[70px]'>
                                  See collection
                                     </Button>
                                 </Link>
@@ -108,7 +108,7 @@ const Hero:React.FC<HeroProps> = ({
             {/* -----left content----- */}
 
             {/* ----right content---- */}
-            <div className=' pt-[ 47px] pb-[60px] max-w-[437px] w-[100%] max-h-[411px] h-[100%] rounded-[52px] overflow-hidden'>
+            <div className=' pt-[ 47px] pb-[60px] max-w-[437px] w-[100%] max-h-[411px] h-[100%] rounded-[52px] overflow-hidden my-auto md:ml-auto ml-[-2%]]'>
                  <img src={heroCover} alt="Start" className=' w-[100%] h-[100%] rounded-[52px]' />
             </div>
             {/* ----right content---- */}

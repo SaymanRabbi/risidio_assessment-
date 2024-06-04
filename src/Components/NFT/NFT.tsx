@@ -49,13 +49,13 @@ const NFT = () => {
    }
     return (
        <Container
-        className='!px-[80px] mt-[140px]'
+        className='px-[80px] mt-[140px]'
        >
          <div>
              <h2 className=' font-[800] text-[24px] leading-[29px]'>NFTs</h2>
         </div>
         {/* ---card-- */}
-        <div className=' grid grid-cols-3 gap-8 mt-[54px]'>
+        <div className=' grid md:grid-cols-3 gap-8 mt-[54px] grid-cols-1'>
              {
                     data.map((nft, index) => (
                         <div className=' h-[498px] rounded-[47px] bg-[#FAFAFA] p-[16px] shadow-md cursor-pointer hover:shadow-lg'
