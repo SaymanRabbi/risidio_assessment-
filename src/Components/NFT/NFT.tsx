@@ -8,6 +8,8 @@ import nft5 from '../../image/nft3.png';
 import nft6 from '../../image/nft4.png';
 import Button from '../Button/Button';
 import { FaLongArrowAltRight } from 'react-icons/fa';
+import { useUserStore } from '../../Store/UserStore';
+import toast from 'react-hot-toast';
 
 interface NFTProps {
     title: string;
@@ -37,7 +39,14 @@ const data = [
         background: nft6,
      }
 ]
+
 const NFT = () => {
+   const {addToWallet,calculateBalance} = useUserStore((state) => state);
+   const AddToCart = (img:any) => {
+         addToWallet(.12, img)
+         toast.success('NFT added to wallet successfully!')
+         calculateBalance();
+   }
     return (
        <Container
         className='!px-[80px] mt-[140px]'
@@ -49,7 +58,10 @@ const NFT = () => {
         <div className=' grid grid-cols-3 gap-8 mt-[54px]'>
              {
                     data.map((nft, index) => (
-                        <div className=' h-[498px] rounded-[47px] bg-[#FAFAFA] p-[16px] shadow-lg'>
+                        <div className=' h-[498px] rounded-[47px] bg-[#FAFAFA] p-[16px] shadow-md cursor-pointer hover:shadow-lg'
+                        key={index}
+                        onClick={() => AddToCart(nft.background)}
+                        >
                             <div className='h-[345px] relative overflow-hidden'>
                                 <img src={
                                     nft?.background
