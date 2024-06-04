@@ -4,6 +4,7 @@ import heroCover from '../../image/hero.png'
 import Button from '../Button/Button';
 import Container from '../Container/Container';
 import Stricker from '../Stricker/Stricker';
+import { Link } from 'react-router-dom';
 interface HeroProps {
     children?: React.ReactNode;
     className?: string;
@@ -92,9 +93,13 @@ const Hero:React.FC<HeroProps> = ({
                                <Button className=' bg-[#23252B] text-white !px-[100px]'>
                                  Buy 
                                  </Button>
-                                 <Button className=' bg-[#E6E9F2] text-[#23252B] !px-[70px]'>
+                                <Link
+                                 to={'/collection'}
+                                >
+                                <Button className=' bg-[#E6E9F2] text-[#23252B] !px-[70px]'>
                                  See collection
                                     </Button>
+                                </Link>
                             </div>
                         )
                     }

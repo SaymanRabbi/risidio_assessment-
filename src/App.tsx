@@ -1,20 +1,17 @@
-import CollectionHero from "./Components/CollectionHero/CollectionHero";
-import Collection from "./Components/Collections/Collection";
-import Footer from "./Components/Footer/Footer";
-import HomeHero from "./Components/HomeHero/HomeHero";
-import NFT from "./Components/NFT/NFT";
-import Navbar from "./Components/Navbar/Navbar";
+import { Route, Routes } from "react-router-dom";
+import Home from "./Components/Home/Home";
+import Collection from "./Components/Collection/Collection";
+import Wallet from "./Components/Wallet/Wallet";
 
 
 function App() {
   return (
   <>
-   <Navbar/>
-   <CollectionHero/>
-   {/* <HomeHero/> */}
-   {/* <Collection/> */}
-   <NFT/>
-   <Footer/>
+  <Routes>
+    <Route path='/'  element={<Home/>}/>
+    <Route path='/collection'  element={<Collection/>}/>
+    <Route path= '/wallet' element={<Wallet/>}/>
+    </Routes>
   </>
   );
 }

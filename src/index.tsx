@@ -2,6 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import { BrowserRouter } from 'react-router-dom';
+import Navbar from './Components/Navbar/Navbar';
+import Footer from './Components/Footer/Footer';
+import { Toaster } from 'react-hot-toast';
 
 
 const root = ReactDOM.createRoot(
@@ -9,7 +13,12 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
+    <BrowserRouter>
+    <Navbar/>
     <App />
+    <Footer/>
+    <Toaster position="top-right" />
+    </BrowserRouter>
   </React.StrictMode>
 );
 

@@ -6,6 +6,7 @@ import Background3 from '../../image/collection3.png';
 import user from '../../image/avatar.png';
 import Button from '../Button/Button';
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 interface CollectionProps {
     title: string;
@@ -59,14 +60,14 @@ const Collection = () => {
                             className=' w-[100%] h-[100%] rounded-[47px] '
                            />
                            {
-                             collection?.button &&  <div className=' absolute w-[100%] h-[100%] flex justify-center items-center top-[0%] bg-black/30 rounded-[47px]'>
+                             collection?.button &&  <Link to='/collection' className=' absolute w-[100%] h-[100%] flex justify-center items-center top-[0%] bg-black/30 rounded-[47px]'>
                                 <Button
                                  className=' bg-white border-white font-[600] text-[16px] leading-[19px] text-[#23252B] flex items-center gap-x-1'
                                 >
                                 Go to collection 
                                 <FaLongArrowAltRight  />
                                 </Button>
-                             </div>
+                             </Link>
                            }
                     </div>
                        {/* tittle and button */}
